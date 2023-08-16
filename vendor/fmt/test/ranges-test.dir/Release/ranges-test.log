@@ -1,0 +1,5 @@
+﻿  Building Custom Rule D:/InternalBase/vendor/fmt/test/CMakeLists.txt
+  ranges-test.cc
+  ranges-odr-test.cc
+  Generating Code...
+  ranges-test.vcxproj -> D:\InternalBase\vendor\fmt\bin\Release\ranges-test.exe

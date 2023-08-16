@@ -1,0 +1,46 @@
+# project build file
+# generated with premake ninja
+
+ninja_required_version = 1.6
+
+# core rules for Dist
+CFLAGS= /fp:fast /MD /arch:AVX2 /wd"4100" /wd"4201" /wd"4307" /wd"4996" /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG" -Isrc
+rule cc
+  command = cl $CFLAGS /nologo /showIncludes -c /Tc$in /Fo$out
+  description = cc $out
+  deps = msvc
+
+CXXFLAGS= /fp:fast /MD /arch:AVX2 /EHsc /wd"4100" /wd"4201" /wd"4307" /wd"4996" /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG" -Isrc
+rule cxx
+  command = cl $CXXFLAGS /nologo /showIncludes -c /Tp$in /Fo$out
+  description = cxx $out
+  deps = msvc
+
+RESFLAGS =  /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG"
+rule rc
+  command = rc /nologo /fo$out $in $RESFLAGS
+  description = rc $out
+
+rule ar
+  command = lib $in /nologo -OUT:$out
+  description = ar $out
+
+rule custom_command
+  command = $CUSTOM_COMMAND
+  description = $CUSTOM_DESCRIPTION
+
+# build files
+build bin/lib/int/Dist/g3log/crashhandler_windows.obj: cxx vendor/g3log/src/crashhandler_windows.cpp
+build bin/lib/int/Dist/g3log/filesink.obj: cxx vendor/g3log/src/filesink.cpp
+build bin/lib/int/Dist/g3log/g3log.obj: cxx vendor/g3log/src/g3log.cpp
+build bin/lib/int/Dist/g3log/logcapture.obj: cxx vendor/g3log/src/logcapture.cpp
+build bin/lib/int/Dist/g3log/loglevels.obj: cxx vendor/g3log/src/loglevels.cpp
+build bin/lib/int/Dist/g3log/logmessage.obj: cxx vendor/g3log/src/logmessage.cpp
+build bin/lib/int/Dist/g3log/logworker.obj: cxx vendor/g3log/src/logworker.cpp
+build bin/lib/int/Dist/g3log/stacktrace_windows.obj: cxx vendor/g3log/src/stacktrace_windows.cpp
+build bin/lib/int/Dist/g3log/time.obj: cxx vendor/g3log/src/time.cpp
+
+# link static lib
+build bin/lib/Dist/g3log.lib: ar bin/lib/int/Dist/g3log/crashhandler_windows.obj bin/lib/int/Dist/g3log/filesink.obj bin/lib/int/Dist/g3log/g3log.obj bin/lib/int/Dist/g3log/logcapture.obj bin/lib/int/Dist/g3log/loglevels.obj bin/lib/int/Dist/g3log/logmessage.obj bin/lib/int/Dist/g3log/logworker.obj bin/lib/int/Dist/g3log/stacktrace_windows.obj bin/lib/int/Dist/g3log/time.obj
+
+build g3log_Dist: phony bin/lib/Dist/g3log.lib

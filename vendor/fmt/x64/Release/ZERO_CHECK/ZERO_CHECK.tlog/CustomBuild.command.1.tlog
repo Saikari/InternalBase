@@ -1,0 +1,10 @@
+^D:\INTERNALBASE\VENDOR\FMT\CMAKEFILES\94F8A6935E6D4179065A68C929D3AAAC\GENERATE.STAMP.RULE
+setlocal
+"E:\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/InternalBase/vendor/fmt -BD:/InternalBase/vendor/fmt --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/InternalBase/vendor/fmt/FMT.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

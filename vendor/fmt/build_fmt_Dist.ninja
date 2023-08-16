@@ -1,0 +1,40 @@
+# project build file
+# generated with premake ninja
+
+ninja_required_version = 1.6
+
+# core rules for Dist
+CFLAGS= /fp:fast /MD /arch:AVX2 /wd"4100" /wd"4201" /wd"4307" /wd"4996" /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG" -Iinclude
+rule cc
+  command = cl $CFLAGS /nologo /showIncludes -c /Tc$in /Fo$out
+  description = cc $out
+  deps = msvc
+
+CXXFLAGS= /fp:fast /MD /arch:AVX2 /EHsc /wd"4100" /wd"4201" /wd"4307" /wd"4996" /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG" -Iinclude
+rule cxx
+  command = cl $CXXFLAGS /nologo /showIncludes -c /Tp$in /Fo$out
+  description = cxx $out
+  deps = msvc
+
+RESFLAGS =  /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG"
+rule rc
+  command = rc /nologo /fo$out $in $RESFLAGS
+  description = rc $out
+
+rule ar
+  command = lib $in /nologo -OUT:$out
+  description = ar $out
+
+rule custom_command
+  command = $CUSTOM_COMMAND
+  description = $CUSTOM_DESCRIPTION
+
+# build files
+build bin/lib/int/Dist/fmt/fmt.obj: cxx vendor/fmt/src/fmt.cc
+build bin/lib/int/Dist/fmt/format.obj: cxx vendor/fmt/src/format.cc
+build bin/lib/int/Dist/fmt/os.obj: cxx vendor/fmt/src/os.cc
+
+# link static lib
+build bin/lib/Dist/fmt.lib: ar bin/lib/int/Dist/fmt/fmt.obj bin/lib/int/Dist/fmt/format.obj bin/lib/int/Dist/fmt/os.obj
+
+build fmt_Dist: phony bin/lib/Dist/fmt.lib

@@ -1,0 +1,27 @@
+﻿  common.cpp
+  detour_hook.cpp
+  fiber_pool.cpp
+  rubik.cpp
+  xiao_wei.cpp
+  gui.cpp
+  hooking.cpp
+  device_hook.cpp
+  main.cpp
+  module.cpp
+  pattern.cpp
+  pattern_batch.cpp
+  range.cpp
+  player_menu.cpp
+  player_stats.cpp
+  setting_menu.cpp
+  pointers.cpp
+  renderer.cpp
+  script.cpp
+  script_mgr.cpp
+  thread_pool.cpp
+  vmt_hook.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 3359 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  internal-base-dx9.vcxproj -> D:\InternalBase\bin\Release\internal-base-dx9.dll

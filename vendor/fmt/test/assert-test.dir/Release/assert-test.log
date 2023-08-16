@@ -1,0 +1,3 @@
+﻿  Building Custom Rule D:/InternalBase/vendor/fmt/test/CMakeLists.txt
+  assert-test.cc
+  assert-test.vcxproj -> D:\InternalBase\vendor\fmt\bin\Release\assert-test.exe

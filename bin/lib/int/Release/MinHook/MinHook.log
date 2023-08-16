@@ -1,0 +1,7 @@
+﻿  buffer.c
+  hde32.c
+  hde64.c
+  hook.c
+  trampoline.c
+  Generating Code...
+  MinHook.vcxproj -> D:\InternalBase\bin\lib\Release\MinHook.lib

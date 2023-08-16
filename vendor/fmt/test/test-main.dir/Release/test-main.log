@@ -1,0 +1,6 @@
+﻿  Building Custom Rule D:/InternalBase/vendor/fmt/test/CMakeLists.txt
+  test-main.cc
+  gtest-extra.cc
+  util.cc
+  Generating Code...
+  test-main.vcxproj -> D:\InternalBase\vendor\fmt\test\Release\test-main.lib

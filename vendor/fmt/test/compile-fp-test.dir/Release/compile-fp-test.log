@@ -1,0 +1,8 @@
+﻿  Building Custom Rule D:/InternalBase/vendor/fmt/test/CMakeLists.txt
+  compile-fp-test.cc
+  test-main.cc
+  gtest-extra.cc
+  util.cc
+  os.cc
+  Generating Code...
+  compile-fp-test.vcxproj -> D:\InternalBase\vendor\fmt\bin\Release\compile-fp-test.exe

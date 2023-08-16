@@ -1,0 +1,9 @@
+﻿  Building Custom Rule D:/InternalBase/vendor/fmt/test/CMakeLists.txt
+  format-impl-test.cc
+  header-only-test.cc
+  test-main.cc
+  gtest-extra.cc
+  util.cc
+  os.cc
+  Generating Code...
+  format-impl-test.vcxproj -> D:\InternalBase\vendor\fmt\bin\Release\format-impl-test.exe

@@ -1,0 +1,30 @@
+# solution build file
+# generated with premake ninja
+
+# build projects
+subninja vendor/ImGui/build_ImGui_Debug.ninja
+subninja vendor/ImGui/build_ImGui_Release.ninja
+subninja vendor/ImGui/build_ImGui_Dist.ninja
+subninja vendor/fmt/build_fmt_Debug.ninja
+subninja vendor/fmt/build_fmt_Release.ninja
+subninja vendor/fmt/build_fmt_Dist.ninja
+subninja vendor/MinHook/build_MinHook_Debug.ninja
+subninja vendor/MinHook/build_MinHook_Release.ninja
+subninja vendor/MinHook/build_MinHook_Dist.ninja
+subninja vendor/g3log/build_g3log_Debug.ninja
+subninja vendor/g3log/build_g3log_Release.ninja
+subninja vendor/g3log/build_g3log_Dist.ninja
+subninja internal-base-dx11/build_internal-base-dx11_Debug.ninja
+subninja internal-base-dx11/build_internal-base-dx11_Release.ninja
+subninja internal-base-dx11/build_internal-base-dx11_Dist.ninja
+subninja internal-base-dx9/build_internal-base-dx9_Debug.ninja
+subninja internal-base-dx9/build_internal-base-dx9_Release.ninja
+subninja internal-base-dx9/build_internal-base-dx9_Dist.ninja
+
+# targets
+build Release: phony ImGui_Release fmt_Release MinHook_Release g3log_Release internal-base-dx11_Release internal-base-dx9_Release
+build Dist: phony ImGui_Dist fmt_Dist MinHook_Dist g3log_Dist internal-base-dx11_Dist internal-base-dx9_Dist
+build Debug: phony ImGui_Debug fmt_Debug MinHook_Debug g3log_Debug internal-base-dx11_Debug internal-base-dx9_Debug
+
+# default target
+default ImGui_Debug

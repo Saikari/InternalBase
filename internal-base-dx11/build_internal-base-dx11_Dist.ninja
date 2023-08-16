@@ -1,0 +1,59 @@
+# project build file
+# generated with premake ninja
+
+ninja_required_version = 1.6
+
+# core rules for Dist
+CFLAGS= /GL /WX /MP /fp:fast /O2 /MD /arch:AVX2 /wd"4100" /wd"4201" /wd"4307" /wd"4996" /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG" /D"internal-base_DIST" -I../vendor/fmt/include -I../vendor/json/single_include -I../vendor/MinHook/include -I../vendor/ImGui -I../vendor/ImGui/examples -I../vendor/g3log/src -Isrc /FIcommon.hpp
+rule cc
+  command = cl $CFLAGS /nologo /showIncludes -c /Tc$in /Fo$out
+  description = cc $out
+  deps = msvc
+
+CXXFLAGS= /GL /WX /MP /fp:fast /O2 /MD /arch:AVX2 /EHsc /wd"4100" /wd"4201" /wd"4307" /wd"4996" /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG" /D"internal-base_DIST" -I../vendor/fmt/include -I../vendor/json/single_include -I../vendor/MinHook/include -I../vendor/ImGui -I../vendor/ImGui/examples -I../vendor/g3log/src -Isrc /FIcommon.hpp
+rule cxx
+  command = cl $CXXFLAGS /nologo /showIncludes -c /Tp$in /Fo$out
+  description = cxx $out
+  deps = msvc
+
+RESFLAGS =  /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG" /D"internal-base_DIST"
+rule rc
+  command = rc /nologo /fo$out $in $RESFLAGS
+  description = rc $out
+
+rule link
+  command = cl $in /link /LIBPATH:"../bin/lib" /NOLOGO /LTCG /WX /MANIFEST:NO /DLL /nologo /out:$out
+  description = link $out
+
+rule custom_command
+  command = $CUSTOM_COMMAND
+  description = $CUSTOM_DESCRIPTION
+
+# build files
+build bin/int/Dist/internal-base-dx11/common.obj: cxx internal-base-dx11/src/common.cpp
+build bin/int/Dist/internal-base-dx11/detour_hook.obj: cxx internal-base-dx11/src/detour_hook.cpp
+build bin/int/Dist/internal-base-dx11/fiber_pool.obj: cxx internal-base-dx11/src/fiber_pool.cpp
+build bin/int/Dist/internal-base-dx11/rubik.obj: cxx internal-base-dx11/src/fonts/rubik.cpp
+build bin/int/Dist/internal-base-dx11/xiao_wei.obj: cxx internal-base-dx11/src/fonts/xiao_wei.cpp
+build bin/int/Dist/internal-base-dx11/gui.obj: cxx internal-base-dx11/src/gui.cpp
+build bin/int/Dist/internal-base-dx11/hooking.obj: cxx internal-base-dx11/src/hooking.cpp
+build bin/int/Dist/internal-base-dx11/swapchain_hook.obj: cxx internal-base-dx11/src/hooks/swapchain_hook.cpp
+build bin/int/Dist/internal-base-dx11/main.obj: cxx internal-base-dx11/src/main.cpp
+build bin/int/Dist/internal-base-dx11/module.obj: cxx internal-base-dx11/src/memory/module.cpp
+build bin/int/Dist/internal-base-dx11/pattern.obj: cxx internal-base-dx11/src/memory/pattern.cpp
+build bin/int/Dist/internal-base-dx11/pattern_batch.obj: cxx internal-base-dx11/src/memory/pattern_batch.cpp
+build bin/int/Dist/internal-base-dx11/range.obj: cxx internal-base-dx11/src/memory/range.cpp
+build bin/int/Dist/internal-base-dx11/player_menu.obj: cxx internal-base-dx11/src/menu/player_menu.cpp
+build bin/int/Dist/internal-base-dx11/player_stats.obj: cxx internal-base-dx11/src/menu/player_stats.cpp
+build bin/int/Dist/internal-base-dx11/setting_menu.obj: cxx internal-base-dx11/src/menu/setting_menu.cpp
+build bin/int/Dist/internal-base-dx11/pointers.obj: cxx internal-base-dx11/src/pointers.cpp
+build bin/int/Dist/internal-base-dx11/renderer.obj: cxx internal-base-dx11/src/renderer.cpp
+build bin/int/Dist/internal-base-dx11/script.obj: cxx internal-base-dx11/src/script.cpp
+build bin/int/Dist/internal-base-dx11/script_mgr.obj: cxx internal-base-dx11/src/script_mgr.cpp
+build bin/int/Dist/internal-base-dx11/thread_pool.obj: cxx internal-base-dx11/src/thread_pool.cpp
+build bin/int/Dist/internal-base-dx11/vmt_hook.obj: cxx internal-base-dx11/src/vmt_hook.cpp
+
+# link shared lib
+build bin/Dist/internal-base-dx11.dll | bin/Dist/internal-base-dx11.lib bin/Dist/internal-base-dx11.exp: link bin/int/Dist/internal-base-dx11/common.obj bin/int/Dist/internal-base-dx11/detour_hook.obj bin/int/Dist/internal-base-dx11/fiber_pool.obj bin/int/Dist/internal-base-dx11/rubik.obj bin/int/Dist/internal-base-dx11/xiao_wei.obj bin/int/Dist/internal-base-dx11/gui.obj bin/int/Dist/internal-base-dx11/hooking.obj bin/int/Dist/internal-base-dx11/swapchain_hook.obj bin/int/Dist/internal-base-dx11/main.obj bin/int/Dist/internal-base-dx11/module.obj bin/int/Dist/internal-base-dx11/pattern.obj bin/int/Dist/internal-base-dx11/pattern_batch.obj bin/int/Dist/internal-base-dx11/range.obj bin/int/Dist/internal-base-dx11/player_menu.obj bin/int/Dist/internal-base-dx11/player_stats.obj bin/int/Dist/internal-base-dx11/setting_menu.obj bin/int/Dist/internal-base-dx11/pointers.obj bin/int/Dist/internal-base-dx11/renderer.obj bin/int/Dist/internal-base-dx11/script.obj bin/int/Dist/internal-base-dx11/script_mgr.obj bin/int/Dist/internal-base-dx11/thread_pool.obj bin/int/Dist/internal-base-dx11/vmt_hook.obj bin/lib/Dist/fmt.lib bin/lib/Dist/MinHook.lib bin/lib/Dist/ImGui.lib bin/lib/Dist/g3log.lib
+
+build internal-base-dx11_Dist: phony bin/Dist/internal-base-dx11.dll

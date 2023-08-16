@@ -1,0 +1,42 @@
+# project build file
+# generated with premake ninja
+
+ninja_required_version = 1.6
+
+# core rules for Release
+CFLAGS= /fp:fast /MD /arch:AVX2 /wd"4100" /wd"4201" /wd"4307" /wd"4996" /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG"
+rule cc
+  command = cl $CFLAGS /nologo /showIncludes -c /Tc$in /Fo$out
+  description = cc $out
+  deps = msvc
+
+CXXFLAGS= /fp:fast /MD /arch:AVX2 /EHsc /wd"4100" /wd"4201" /wd"4307" /wd"4996" /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG"
+rule cxx
+  command = cl $CXXFLAGS /nologo /showIncludes -c /Tp$in /Fo$out
+  description = cxx $out
+  deps = msvc
+
+RESFLAGS =  /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG"
+rule rc
+  command = rc /nologo /fo$out $in $RESFLAGS
+  description = rc $out
+
+rule ar
+  command = lib $in /nologo -OUT:$out
+  description = ar $out
+
+rule custom_command
+  command = $CUSTOM_COMMAND
+  description = $CUSTOM_DESCRIPTION
+
+# build files
+build bin/lib/int/Release/MinHook/buffer.obj: cc vendor/MinHook/src/buffer.c
+build bin/lib/int/Release/MinHook/hde32.obj: cc vendor/MinHook/src/hde/hde32.c
+build bin/lib/int/Release/MinHook/hde64.obj: cc vendor/MinHook/src/hde/hde64.c
+build bin/lib/int/Release/MinHook/hook.obj: cc vendor/MinHook/src/hook.c
+build bin/lib/int/Release/MinHook/trampoline.obj: cc vendor/MinHook/src/trampoline.c
+
+# link static lib
+build bin/lib/Release/MinHook.lib: ar bin/lib/int/Release/MinHook/buffer.obj bin/lib/int/Release/MinHook/hde32.obj bin/lib/int/Release/MinHook/hde64.obj bin/lib/int/Release/MinHook/hook.obj bin/lib/int/Release/MinHook/trampoline.obj
+
+build MinHook_Release: phony bin/lib/Release/MinHook.lib

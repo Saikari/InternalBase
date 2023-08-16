@@ -1,0 +1,8 @@
+﻿  Building Custom Rule D:/InternalBase/vendor/fmt/test/CMakeLists.txt
+  posix-mock-test.cc
+  format.cc
+  test-main.cc
+  gtest-extra.cc
+  util.cc
+  Generating Code...
+  posix-mock-test.vcxproj -> D:\InternalBase\vendor\fmt\bin\Release\posix-mock-test.exe

@@ -1,0 +1,44 @@
+# project build file
+# generated with premake ninja
+
+ninja_required_version = 1.6
+
+# core rules for Release
+CFLAGS= /fp:fast /MD /arch:AVX2 /wd"4100" /wd"4201" /wd"4307" /wd"4996" /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG" -I.
+rule cc
+  command = cl $CFLAGS /nologo /showIncludes -c /Tc$in /Fo$out
+  description = cc $out
+  deps = msvc
+
+CXXFLAGS= /fp:fast /MD /arch:AVX2 /EHsc /wd"4100" /wd"4201" /wd"4307" /wd"4996" /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG" -I.
+rule cxx
+  command = cl $CXXFLAGS /nologo /showIncludes -c /Tp$in /Fo$out
+  description = cxx $out
+  deps = msvc
+
+RESFLAGS =  /D"_CRT_SECURE_NO_WARNINGS" /D"NOMINMAX" /D"WIN32_LEAN_AND_MEAN" /D"_WIN32_WINNT=0x601" /D"NDEBUG"
+rule rc
+  command = rc /nologo /fo$out $in $RESFLAGS
+  description = rc $out
+
+rule ar
+  command = lib $in /nologo -OUT:$out
+  description = ar $out
+
+rule custom_command
+  command = $CUSTOM_COMMAND
+  description = $CUSTOM_DESCRIPTION
+
+# build files
+build bin/lib/int/Release/ImGui/imgui_impl_dx11.obj: cxx vendor/ImGui/backends/imgui_impl_dx11.cpp
+build bin/lib/int/Release/ImGui/imgui_impl_win32.obj: cxx vendor/ImGui/backends/imgui_impl_win32.cpp
+build bin/lib/int/Release/ImGui/imgui.obj: cxx vendor/ImGui/imgui.cpp
+build bin/lib/int/Release/ImGui/imgui_demo.obj: cxx vendor/ImGui/imgui_demo.cpp
+build bin/lib/int/Release/ImGui/imgui_draw.obj: cxx vendor/ImGui/imgui_draw.cpp
+build bin/lib/int/Release/ImGui/imgui_tables.obj: cxx vendor/ImGui/imgui_tables.cpp
+build bin/lib/int/Release/ImGui/imgui_widgets.obj: cxx vendor/ImGui/imgui_widgets.cpp
+
+# link static lib
+build bin/lib/Release/ImGui.lib: ar bin/lib/int/Release/ImGui/imgui_impl_dx11.obj bin/lib/int/Release/ImGui/imgui_impl_win32.obj bin/lib/int/Release/ImGui/imgui.obj bin/lib/int/Release/ImGui/imgui_demo.obj bin/lib/int/Release/ImGui/imgui_draw.obj bin/lib/int/Release/ImGui/imgui_tables.obj bin/lib/int/Release/ImGui/imgui_widgets.obj
+
+build ImGui_Release: phony bin/lib/Release/ImGui.lib

@@ -1,0 +1,83 @@
+﻿  fmt.cc
+D:\InternalBase\vendor\fmt\src\fmt.cc(69,1): warning C4005: 'WIN32_LEAN_AND_MEAN': macro redefinition
+D:\InternalBase\vendor\fmt\src\fmt.cc(69,1): message : 'WIN32_LEAN_AND_MEAN' previously declared on the command line
+D:\InternalBase\vendor\fmt\src\fmt.cc(73,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\src\fmt.cc(73,18): error C2230: could not find module 'fmt'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(397,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\include\fmt\core.h(500,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\include\fmt\core.h(504,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\include\fmt\core.h(655,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\include\fmt\core.h(721,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1061,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1062,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1063,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1066,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1600,1): error C3378: a declaration can be exported only from a module interface unit
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1665,1): error C2059: syntax error: 'export'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1668,78): error C2143: syntax error: missing ';' before '{'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1668,78): error C2059: syntax error: '{'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1669,22): error C2143: syntax error: missing ';' before '{'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1669,22): error C2059: syntax error: '{'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1671,5): error C2059: syntax error: 'break'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1672,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1673,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1674,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1675,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1676,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1677,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1678,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1679,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1680,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1681,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1682,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1683,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1684,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1685,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1686,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1687,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1688,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1689,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1690,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1691,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1692,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1693,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1694,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1695,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1696,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1697,43): error C2653: 'Context': is not a class or namespace name
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1697,52): error C2146: syntax error: missing '>' before identifier 'char_type'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1698,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1699,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1700,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1701,3): error C2059: syntax error: 'case'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1702,5): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1702,42): error C2065: 'Context': undeclared identifier
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1702,25): error C2923: 'fmt::v10::basic_format_arg': 'Context' is not a valid template type argument for parameter 'Context'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1702,42): message : see declaration of 'Context'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1702,52): error C2955: 'fmt::v10::basic_format_arg': use of class template requires template argument list
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1604,29): message : see declaration of 'fmt::v10::basic_format_arg'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1704,3): error C2059: syntax error: 'return'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1862,22): error C7568: argument list missing after assumed function template 'basic_format_arg'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1968,2): message : see reference to class template instantiation 'basic_format_args<Context>' being compiled
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1876,11): error C2653: 'detail': is not a class or namespace name
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1876,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1876,19): error C7568: argument list missing after assumed function template 'value'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1876,1): error C2062: type 'unknown-type' unexpected
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1876,1): error C2238: unexpected token(s) preceding ';'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1887,47): error C2653: 'detail': is not a class or namespace name
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1887,55): error C3613: missing return type after '->' ('int' assumed)
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1887,55): error C3646: 'type': unknown override specifier
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1894,48): error C2653: 'detail': is not a class or namespace name
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1894,56): error C7568: argument list missing after assumed function template 'value'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1893,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1893,1): error C2144: syntax error: 'unknown-type' should be preceded by ')'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1893,1): error C2144: syntax error: 'unknown-type' should be preceded by ';'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1893,1): error C2059: syntax error: ')'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1895,15): error C2065: 'desc': undeclared identifier
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1894,72): error C2150: 'basic_format_args<Context>::values': bit field must have type 'int', 'signed int', or 'unsigned int'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1895,30): error C2061: syntax error: identifier 'values'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1895): error C2059: syntax error: '{'
+D:\InternalBase\vendor\fmt\include\fmt\core.h(1968): fatal  error C1903: unable to recover from previous error(s); stopping compilation
+  format.cc
+  os.cc
+  Generating Code...

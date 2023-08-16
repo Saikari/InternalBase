@@ -1,0 +1,8 @@
+﻿  Building Custom Rule D:/InternalBase/vendor/fmt/test/CMakeLists.txt
+  unicode-test.cc
+  test-main.cc
+  gtest-extra.cc
+  util.cc
+  os.cc
+  Generating Code...
+  unicode-test.vcxproj -> D:\InternalBase\vendor\fmt\bin\Release\unicode-test.exe

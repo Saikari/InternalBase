@@ -1,0 +1,5 @@
+﻿  Building Custom Rule D:/InternalBase/vendor/fmt/CMakeLists.txt
+  format.cc
+  os.cc
+  Generating Code...
+  fmt.vcxproj -> D:\InternalBase\vendor\fmt\Release\fmt.lib

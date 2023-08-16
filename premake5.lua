@@ -1,3 +1,4 @@
+require "ninja"
 workspace "internal-base"
   architecture "x64"
   startproject "internal-base"
@@ -12,7 +13,7 @@ workspace "internal-base"
   outputdir = "%{cfg.buildcfg}"
 
   IncludeDir = {}
-  IncludeDir["fmtlib"] = "vendor/fmtlib/include"
+  IncludeDir["fmt"] = "vendor/fmt/include"
   IncludeDir["json"] = "vendor/json/single_include"
   IncludeDir["MinHook"] = "vendor/MinHook/include"
   IncludeDir["ImGui"] = "vendor/ImGui"
@@ -89,7 +90,7 @@ workspace "internal-base"
     DeclareMSVCOptions()
     DeclareDebugOptions()
 
-  project "fmtlib"
+  project "fmt"
     location "vendor/%{prj.name}"
     kind "StaticLib"
     language "C++"
@@ -185,7 +186,7 @@ workspace "internal-base"
 
     includedirs
     {
-      "%{IncludeDir.fmtlib}",
+      "%{IncludeDir.fmt}",
       "%{IncludeDir.json}",
       "%{IncludeDir.MinHook}",
       "%{IncludeDir.ImGui}",
@@ -201,7 +202,7 @@ workspace "internal-base"
 
     links
     {
-      "fmtlib",
+      "fmt",
       "MinHook",
       "ImGui",
       "g3log"
@@ -255,7 +256,7 @@ workspace "internal-base"
 
     includedirs
     {
-      "%{IncludeDir.fmtlib}",
+      "%{IncludeDir.fmt}",
       "%{IncludeDir.json}",
       "%{IncludeDir.MinHook}",
       "%{IncludeDir.ImGui}",
@@ -271,7 +272,7 @@ workspace "internal-base"
 
     links
     {
-      "fmtlib",
+      "fmt",
       "MinHook",
       "ImGui",
       "g3log"

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\args-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\assert-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\chrono-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\color-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\compile-fp-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\compile-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\core-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\enforce-checks-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\format-impl-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\format-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\gtest-extra-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\os-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\ostream-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\posix-mock-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\printf-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\ranges-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\scan-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\std-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\unicode-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\bin\Release\xchar-test.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\InternalBase\vendor\fmt\x64\Release\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
