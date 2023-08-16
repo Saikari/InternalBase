@@ -7,7 +7,7 @@ Credits goes to
 4) https://github.com/KjellKod/g3log
 Open internal-base.sln with Visual Studio 2022 and compile.
 Compile from premake5.lua:
-1) https://premake.github.io - Get premake5 add it to PATH environment variable
-2) Clone this repo
-3) Cd to root of cloned repo folder
-4) Run GenerateProjects.bat from cmd
+A) https://premake.github.io - Get premake5 add it to PATH environment variable
+B) Clone this repo
+C) Cd to root of cloned repo folder
+D) Run GenerateProjects.bat from cmd
